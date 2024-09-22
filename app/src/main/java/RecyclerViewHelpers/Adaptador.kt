@@ -65,11 +65,11 @@ class Adaptador(var Datos: List<Enfermeros>): RecyclerView.Adapter<ViewHolder>()
 
                 // Cambiamos al hilo principal para notificar al usuario
                 withContext(Dispatchers.Main) {
-                    Toast.makeText(context, "Enfermero eliminado", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(context, "Enfermero eliminado, por favor refresque la app para que los cambios se visualicen.", Toast.LENGTH_SHORT).show()
                 }
             } catch (e: Exception) {
                 withContext(Dispatchers.Main) {
-                    Toast.makeText(context, "Error al eliminar el enfermero", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(context, "Error al eliminar el enfermero.", Toast.LENGTH_SHORT).show()
                 }
             }
         }
